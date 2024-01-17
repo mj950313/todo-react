@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/* Common css */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Appbody css */
+.App {
+  background-color: #C3D1CC;
+  height: 100vh;
+  padding-top: 96px;
+  overflow-x: hidden;
+}
+
+.todolist {
+  background-color: white;
+  width: 1080px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 2px 5px 6px 2px rgba(0, 0, 0, 0.34);
+}
+@media (max-width: 540px) {
+  .todolist {
+    width: 100%;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 58px;
+  height: 900px;
+  position: relative;
+}
+
+/* Header css */
+.header {
+  font-size: 20px;
+  align-items: flex-end;
+  gap: 40px;
+  padding: 20px 55px;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  font-weight: bold;
+}
+@media (max-width: 540px) {
+  .header {
+    width: 100%;
+    gap: 5px;
+  }
+}
+
+.logoimg {
+  display: flex;
+  align-items: center;
+  color: #FF6F0F;
+  font-size: larger;
+}
+
+.menu {
+  display: flex;
+}
+.menu a {
+  color: #4D5159;
+  padding: 20px 18px;
+}
+
+/* About css */
+.About {
+  display: flex;
+  color: black;
+  height: 700px;
+  flex-wrap: wrap;
+}
+
+.aboutleft {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.aboutleft,
+.aboutright {
+  width: 50%; /* 초기 설정: 화면 폭이 600px 이상이면 50%로 설정하여 수직으로 나열 */
+}
+
+.mjlogo {
+  border-radius: 20px;
+  width: 300px;
+  height: 350px;
+  box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.34);
+  border: 3px solid black;
+}
+
+.devinfo {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 70px;
+  color: #FF6F0F;
+}
+
+.infolistbox {
+  padding-top: 35px;
+}
+
+.infolist {
+  font-size: 18px;
+  margin-top: 40px;
+  color: black;
+  font-weight: bolder;
+}
+
+@media (max-width: 540px) {
+  .aboutleft,
+  .aboutright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* Home css */
+.Home {
+  display: flex;
+  width: 100%;
+  gap: 35px;
+}
+
+.Homeleft {
+  width: 50%;
+}
+@media (max-width: 540px) {
+  .Homeleft {
+    display: none;
+    width: 100%;
+  }
+}
+
+.clock {
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+}
+
+.calendar {
+  height: 700px;
+}
+
+#root .react-calendar {
+  width: 100%;
+  height: 320px;
+  border-radius: 15px;
+  margin-top: 35px;
+  border-radius: 20px;
+  border: none !important;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.34);
+}
+#root .react-calendar span {
+  font-size: 17px;
+  font-weight: 900;
+  color: white;
+}
+
+#root abbr {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+#root .react-calendar__tile--now {
+  background: #FF6F0F;
+  border-radius: 50%;
+}
+
+#root .react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  background-color: #FF6F0F;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#root .react-calendar__navigation button:hover {
+  background-color: transparent;
+}
+
+#root .react-calendar__tile--active {
+  background: #FF6F0F;
+  color: white;
+  border-radius: 50%;
+}
+
+.Homeright {
+  width: 50%;
+  height: 700px;
+  background-image: url(../src/assets/rb.jpg);
+  background-position: center;
+  background-size: cover;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+}
+@media (max-width: 540px) {
+  .Homeright {
+    width: 100%;
+  }
+}
+
+.todobox {
+  display: flex;
+  margin-top: 35px;
+}
+.todobox .todoinput {
+  flex-grow: 1;
+  font-size: medium;
+  font-weight: 900;
+  height: 47px;
+  border: 3px solid #B2B5BB;
+  border-radius: 15px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+@media (max-width: 540px) {
+  .todobox .todoinput {
+    width: 100%;
+  }
+}
+.todobox .todoinput:focus {
+  outline: none;
+  font-size: medium;
+}
+.todobox button {
+  width: 50px;
+  height: 47px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background-color: white;
+  border-left: none;
+  font-size: x-large;
+  cursor: pointer;
+  background-image: url(./assets/daangn.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.todoinput::-moz-placeholder {
+  color: #B2B5BB;
+}
+
+.todoinput::placeholder {
+  color: #B2B5BB;
+}
+
+.todoul {
+  min-height: 550px;
+  max-height: 550px;
+  overflow-y: auto;
+}
+.todoul li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  height: 47px;
+  border: none;
+  border-radius: 15px;
+  color: #4D5159;
+}
+.todoul li input {
+  height: 100%;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 900;
+  border: 3px solid #B2B5BB;
+  border-radius: 15px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  flex-grow: 1;
+}
+.todoul li input:focus {
+  outline: none;
+  font-size: 18px;
+}
+.todoul button {
+  width: 50px;
+  height: 47px;
+  border: none;
+  background-color: transparent;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+/* Footer css */
+.footer {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 40px;
+  line-height: 1.4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.footer a {
+  color: #B2B5BB;
+}
+@media (max-width: 540px) {
+  .footer {
+    width: 100%;
+  }
+}
+
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin: 10px 0;
+  animation: skeleton-loading 1.2s infinite ease-in-out;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
+}
+.skeleton-image {
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.skeleton-text {
+  height: 30px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.skeleton-title {
+  height: 40px;
+  width: 60%;
+  margin: 70px 0;
+}/*# sourceMappingURL=App.css.map */
